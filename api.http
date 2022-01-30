@@ -1,0 +1,62 @@
+### API
+GET / HTTP/1.1
+Host: localhost:3333
+
+### Auth
+POST /login HTTP/1.1
+Host: localhost:3333
+Content-Type: application/json
+
+{
+    "username":"root",
+    "password":"root"
+}
+
+### Read
+GET /companies/ HTTP/1.1
+Host: localhost:3333
+Authorization: 0000000000000001
+###
+GET /companies/61f5bc3365afe97fd595b075 HTTP/1.1
+Host: localhost:3333
+Authorization: 0000000000000001
+
+### Create
+POST /companies HTTP/1.1
+Host: localhost:3333
+Authorization: 0000000000000001
+Content-Type: application/json
+
+{
+    "name":"444",
+    "country": "444",
+    "state": "444",
+    "city": "444",
+    "address": "444",
+    "district": "444",
+    "number": "444",
+    "zip": "444",
+    "email": "444",
+    "phone": "444"
+}
+### Update
+PUT /companies/61f5c926043f4f4100de700f HTTP/1.1
+Host: localhost:3333
+Authorization: 0000000000000001
+Content-Type: application/json
+Content-Length: 23
+
+{
+    "city": "333"
+}
+
+### Delete
+DELETE /companies/61f5d02fe9da1e24289e06e4 HTTP/1.1
+Host: localhost:3333
+Authorization: 0000000000000001
+Content-Type: application/json
+Content-Length: 22
+
+{
+    "name":"333"
+}
